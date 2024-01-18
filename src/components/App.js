@@ -10,6 +10,11 @@ const App = () => {
       setName(e.target.value)
     }
 
+    if(name) {
+      name = "Hello " + name + "!"
+    }
+    
+
 
   return (
     <div>
@@ -18,8 +23,10 @@ const App = () => {
 
       <input
       onChange={handleInput}
-      />
-      {name?<p>Hello {name}!</p>:""}
+      ></input>
+      {/* {name ? <p>Hello {name}!</p> : ""} */}
+
+      <p>{name}</p>
 
     </div>
   )
